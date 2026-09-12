@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nostra - Collections</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- OFFER BAR -->
+    <div class="offer-bar">
+
+        <p>
+            Sign Up and GET 20% OFF for your first Order
+        </p>
+
+        <span onclick="closeOffer()">&times;</span>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-logo">
+            <a href="index.html">Nostra</a>
+        </div>
+
+        <nav class="desktop-menu">
+
+            <a href="index.html">Home</a>
+            <a href="collections.html" class="active">Collections</a>
+            <a href="contact.html">Contact Us</a>
+
+        </nav>
+
+        <div class="mobile-menu-icon" onclick="openMenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </header>
+
+
+    <!-- MOBILE NAV -->
+    <div class="side-navbar" id="sideNavbar">
+
+        <div class="side-navbar-close" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="contact.html">Contact Us</a>
+
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+
+        <h1>Collections</h1>
+
+        <p>
+            Discover our latest fashion collections
+        </p>
+
+    </section>
+
+
+    <!-- COLLECTION AREA -->
+    <section class="collections-section">
+
+
+        <!-- FILTER SIDEBAR -->
+        <aside class="filter-sidebar">
+
+            <div class="filter-heading">
+
+                <h3>Filter</h3>
+
+                <button onclick="clearFilters()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+            <div class="filter-group">
+
+                <h4>Category</h4>
+
+                <label>
+                    <input type="checkbox"
+                           class="category-filter"
+                           value="Shirt">
+                    Shirts
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="category-filter"
+                           value="T-Shirt">
+                    T-Shirts
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="category-filter"
+                           value="Dress">
+                    Dresses
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="category-filter"
+                           value="Jeans">
+                    Jeans
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="category-filter"
+                           value="Jacket">
+                    Jackets
+                </label>
+
+            </div>
+
+
+            <!-- GENDER -->
+            <div class="filter-group">
+
+                <h4>Gender</h4>
+
+                <label>
+                    <input type="checkbox"
+                           class="gender-filter"
+                           value="Men">
+                    Men
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="gender-filter"
+                           value="Women">
+                    Women
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="gender-filter"
+                           value="Unisex">
+                    Unisex
+                </label>
+
+            </div>
+
+
+            <!-- PRICE -->
+            <div class="filter-group">
+
+                <h4>Price</h4>
+
+                <label>
+                    <input type="checkbox"
+                           class="price-filter"
+                           value="0-1000">
+                    Under ₹1,000
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="price-filter"
+                           value="1000-2000">
+                    ₹1,000 - ₹2,000
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="price-filter"
+                           value="2000-3000">
+                    ₹2,000 - ₹3,000
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="price-filter"
+                           value="3000-99999">
+                    Above ₹3,000
+                </label>
+
+            </div>
+
+
+            <!-- COLOR -->
+            <div class="filter-group">
+
+                <h4>Color</h4>
+
+                <label>
+                    <input type="checkbox"
+                           class="color-filter"
+                           value="Black">
+                    Black
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="color-filter"
+                           value="White">
+                    White
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="color-filter"
+                           value="Blue">
+                    Blue
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="color-filter"
+                           value="Red">
+                    Red
+                </label>
+
+            </div>
+
+        </aside>
+
+
+        <!-- PRODUCTS -->
+        <main class="collections-main">
+
+
+            <!-- SEARCH -->
+            <div class="collection-top">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                           id="searchInput"
+                           placeholder="Search for products...">
+
+                </div>
+
+                <p id="productCount">
+                    20 Products
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+            <div class="product-grid"
+                 id="productContainer">
+
+
+                <!-- PRODUCT 1 -->
+                <div class="product-card"
+                     data-name="Classic Black Shirt"
+                     data-category="Shirt"
+                     data-gender="Men"
+                     data-price="1499"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=600&q=80"
+                             alt="Classic Black Shirt">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Classic Black Shirt</h3>
+
+                    <p class="category-name">
+                        Men / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,499
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+                <div class="product-card"
+                     data-name="White Casual Shirt"
+                     data-category="Shirt"
+                     data-gender="Men"
+                     data-price="1299"
+                     data-color="White">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80"
+                             alt="White Casual Shirt">
+
+                    </div>
+
+                    <h3>White Casual Shirt</h3>
+
+                    <p class="category-name">
+                        Men / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,299
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+                <div class="product-card"
+                     data-name="Blue Denim Shirt"
+                     data-category="Shirt"
+                     data-gender="Men"
+                     data-price="1699"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80"
+                             alt="Blue Denim Shirt">
+
+                    </div>
+
+                    <h3>Blue Denim Shirt</h3>
+
+                    <p class="category-name">
+                        Men / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,699
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+                <div class="product-card"
+                     data-name="Black T Shirt"
+                     data-category="T-Shirt"
+                     data-gender="Men"
+                     data-price="799"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                             alt="Black T Shirt">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Black T-Shirt</h3>
+
+                    <p class="category-name">
+                        Men / T-Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹799
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 5 -->
+                <div class="product-card"
+                     data-name="White T Shirt"
+                     data-category="T-Shirt"
+                     data-gender="Unisex"
+                     data-price="699"
+                     data-color="White">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                             alt="White T Shirt">
+
+                    </div>
+
+                    <h3>White T-Shirt</h3>
+
+                    <p class="category-name">
+                        Unisex / T-Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹699
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+                <div class="product-card"
+                     data-name="Red Oversized T Shirt"
+                     data-category="T-Shirt"
+                     data-gender="Unisex"
+                     data-price="999"
+                     data-color="Red">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80"
+                             alt="Red T Shirt">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Red Oversized T-Shirt</h3>
+
+                    <p class="category-name">
+                        Unisex / T-Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹999
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 7 -->
+                <div class="product-card"
+                     data-name="Elegant Black Dress"
+                     data-category="Dress"
+                     data-gender="Women"
+                     data-price="2499"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+                             alt="Black Dress">
+
+                    </div>
+
+                    <h3>Elegant Black Dress</h3>
+
+                    <p class="category-name">
+                        Women / Dress
+                    </p>
+
+                    <p class="price">
+                        ₹2,499
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 8 -->
+                <div class="product-card"
+                     data-name="White Summer Dress"
+                     data-category="Dress"
+                     data-gender="Women"
+                     data-price="2299"
+                     data-color="White">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80"
+                             alt="White Summer Dress">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>White Summer Dress</h3>
+
+                    <p class="category-name">
+                        Women / Dress
+                    </p>
+
+                    <p class="price">
+                        ₹2,299
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 9 -->
+                <div class="product-card"
+                     data-name="Blue Summer Dress"
+                     data-category="Dress"
+                     data-gender="Women"
+                     data-price="2799"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80"
+                             alt="Blue Dress">
+
+                    </div>
+
+                    <h3>Blue Summer Dress</h3>
+
+                    <p class="category-name">
+                        Women / Dress
+                    </p>
+
+                    <p class="price">
+                        ₹2,799
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 10 -->
+                <div class="product-card"
+                     data-name="Classic Blue Jeans"
+                     data-category="Jeans"
+                     data-gender="Men"
+                     data-price="1899"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
+                             alt="Blue Jeans">
+
+                    </div>
+
+                    <h3>Classic Blue Jeans</h3>
+
+                    <p class="category-name">
+                        Men / Jeans
+                    </p>
+
+                    <p class="price">
+                        ₹1,899
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 11 -->
+                <div class="product-card"
+                     data-name="Black Slim Jeans"
+                     data-category="Jeans"
+                     data-gender="Men"
+                     data-price="2199"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                             alt="Black Jeans">
+
+                    </div>
+
+                    <h3>Black Slim Jeans</h3>
+
+                    <p class="category-name">
+                        Men / Jeans
+                    </p>
+
+                    <p class="price">
+                        ₹2,199
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 12 -->
+                <div class="product-card"
+                     data-name="Classic Denim Jacket"
+                     data-category="Jacket"
+                     data-gender="Unisex"
+                     data-price="2999"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80"
+                             alt="Denim Jacket">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Classic Denim Jacket</h3>
+
+                    <p class="category-name">
+                        Unisex / Jacket
+                    </p>
+
+                    <p class="price">
+                        ₹2,999
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 13 -->
+                <div class="product-card"
+                     data-name="Black Leather Jacket"
+                     data-category="Jacket"
+                     data-gender="Men"
+                     data-price="3999"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                             alt="Leather Jacket">
+
+                    </div>
+
+                    <h3>Black Leather Jacket</h3>
+
+                    <p class="category-name">
+                        Men / Jacket
+                    </p>
+
+                    <p class="price">
+                        ₹3,999
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 14 -->
+                <div class="product-card"
+                     data-name="White Premium Shirt"
+                     data-category="Shirt"
+                     data-gender="Women"
+                     data-price="2299"
+                     data-color="White">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=600&q=80"
+                             alt="Premium Shirt">
+
+                    </div>
+
+                    <h3>White Premium Shirt</h3>
+
+                    <p class="category-name">
+                        Women / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹2,299
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 15 -->
+                <div class="product-card"
+                     data-name="Red Fashion Dress"
+                     data-category="Dress"
+                     data-gender="Women"
+                     data-price="3199"
+                     data-color="Red">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80"
+                             alt="Red Dress">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Red Fashion Dress</h3>
+
+                    <p class="category-name">
+                        Women / Dress
+                    </p>
+
+                    <p class="price">
+                        ₹3,199
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 16 -->
+                <div class="product-card"
+                     data-name="Blue Casual Jacket"
+                     data-category="Jacket"
+                     data-gender="Women"
+                     data-price="2899"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=600&q=80"
+                             alt="Blue Jacket">
+
+                    </div>
+
+                    <h3>Blue Casual Jacket</h3>
+
+                    <p class="category-name">
+                        Women / Jacket
+                    </p>
+
+                    <p class="price">
+                        ₹2,899
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 17 -->
+                <div class="product-card"
+                     data-name="Black Polo Shirt"
+                     data-category="T-Shirt"
+                     data-gender="Men"
+                     data-price="1199"
+                     data-color="Black">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80"
+                             alt="Black Polo">
+
+                    </div>
+
+                    <h3>Black Polo Shirt</h3>
+
+                    <p class="category-name">
+                        Men / T-Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,199
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 18 -->
+                <div class="product-card"
+                     data-name="White Oversized Shirt"
+                     data-category="Shirt"
+                     data-gender="Unisex"
+                     data-price="1399"
+                     data-color="White">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+                             alt="Oversized Shirt">
+
+                    </div>
+
+                    <h3>White Oversized Shirt</h3>
+
+                    <p class="category-name">
+                        Unisex / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,399
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 19 -->
+                <div class="product-card"
+                     data-name="Blue Relaxed Jeans"
+                     data-category="Jeans"
+                     data-gender="Women"
+                     data-price="2499"
+                     data-color="Blue">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=600&q=80"
+                             alt="Blue Jeans">
+
+                        <span class="sale-badge">Sale</span>
+
+                    </div>
+
+                    <h3>Blue Relaxed Jeans</h3>
+
+                    <p class="category-name">
+                        Women / Jeans
+                    </p>
+
+                    <p class="price">
+                        ₹2,499
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 20 -->
+                <div class="product-card"
+                     data-name="Red Casual Shirt"
+                     data-category="Shirt"
+                     data-gender="Men"
+                     data-price="1599"
+                     data-color="Red">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=600&q=80"
+                             alt="Red Shirt">
+
+                    </div>
+
+                    <h3>Red Casual Shirt</h3>
+
+                    <p class="category-name">
+                        Men / Shirt
+                    </p>
+
+                    <p class="price">
+                        ₹1,599
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+            <div class="no-results" id="noResults">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h2>No Products Found</h2>
+
+                <p>
+                    Try another search or change your filters.
+                </p>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section">
+
+        <h2>Join our News Letter</h2>
+
+        <p>
+            Signup for our email newspaper to get exclusive discounts,
+            updates, and more
+        </p>
+
+        <form onsubmit="subscribeNewsletter(event)">
+
+            <input type="email"
+                   id="newsletterEmail"
+                   placeholder="Enter your email"
+                   required>
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h2>Nostra</h2>
+
+                <p>
+                    Nostra is your destination for modern fashion,
+                    quality products and the latest trends.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Customer Care</h3>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Nostra.com. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

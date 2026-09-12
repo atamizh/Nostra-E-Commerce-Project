@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nostra - Fashion Store</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP OFFER BAR -->
+    <div class="offer-bar">
+        <p>Sign Up and GET 20% OFF for your first Order</p>
+        <span onclick="closeOffer()">&times;</span>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-logo">
+            <a href="index.html">Nostra</a>
+        </div>
+
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="mobile-menu-icon" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+
+    <!-- MOBILE SIDE NAV -->
+    <div class="side-navbar" id="sideNavbar">
+
+        <div class="side-navbar-close" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="collections.html" onclick="closeMenu()">Collections</a>
+        <a href="contact.html" onclick="closeMenu()">Contact Us</a>
+
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small-title">
+                New Season Collection
+            </p>
+
+            <h1>
+                Level up your style with our
+                <span>Summer Collections</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover the latest fashion trends and elevate your everyday style.
+            </p>
+
+            <a href="collections.html" class="black-button">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
+                 alt="Fashion Collection">
+        </div>
+
+    </section>
+
+
+    <!-- BRANDS -->
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Brands</h2>
+        </div>
+
+        <div class="brands-container">
+
+            <div class="brand">
+                <i class="fa-brands fa-twitch"></i>
+                <p>Puma</p>
+            </div>
+
+            <div class="brand">
+                <i class="fa-brands fa-behance"></i>
+                <p>Adidas</p>
+            </div>
+
+            <div class="brand">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Simple</p>
+            </div>
+
+            <div class="brand">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Leaves</p>
+            </div>
+
+            <div class="brand">
+                <i class="fa-brands fa-behance"></i>
+                <p>Behance</p>
+            </div>
+
+            <div class="brand">
+                <i class="fa-brands fa-twitch"></i>
+                <p>Twitch</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOMER EXPERIENCE -->
+    <section class="experience section">
+
+        <div class="experience-heading">
+
+            <h2>
+                We Provide Best
+                <br>
+                Customer Experiences
+            </h2>
+
+            <p>
+                We ensure that our customer have the best shopping experience
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>Original Products</h3>
+
+                <p>
+                    We provide 100% original and high-quality products.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-face-smile"></i>
+
+                <h3>Satisfaction Guarantee</h3>
+
+                <p>
+                    Your satisfaction is our top priority.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>New Arrival Everyday</h3>
+
+                <p>
+                    Discover new fashion collections every day.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <h3>Fast & Free Shipping</h3>
+
+                <p>
+                    Enjoy fast and free delivery on selected orders.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEW ARRIVALS -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>New Arrivals</h2>
+
+            <a href="collections.html">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="arrival-grid">
+
+            <div class="arrival-card">
+
+                <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=700&q=80"
+                     alt="Fashion">
+
+                <div class="arrival-overlay">
+                    <span>New</span>
+                    <a href="collections.html">Shop Now</a>
+                </div>
+
+            </div>
+
+
+            <div class="arrival-card">
+
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=80"
+                     alt="Fashion">
+
+                <div class="arrival-overlay">
+                    <span>New</span>
+                    <a href="collections.html">Shop Now</a>
+                </div>
+
+            </div>
+
+
+            <div class="arrival-card">
+
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
+                     alt="Fashion">
+
+                <div class="arrival-overlay">
+                    <span>New</span>
+                    <a href="collections.html">Shop Now</a>
+                </div>
+
+            </div>
+
+
+            <div class="arrival-card">
+
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80"
+                     alt="Fashion">
+
+                <div class="arrival-overlay">
+                    <span>New</span>
+                    <a href="collections.html">Shop Now</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOST WANTED -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Most Wanted</h2>
+
+            <a href="collections.html">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="product-grid home-products">
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80"
+                         alt="Product">
+
+                    <span class="sale-badge">Sale</span>
+
+                </div>
+
+                <h3>Classic Shirt</h3>
+                <p class="price">₹1,499</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&q=80"
+                         alt="Product">
+
+                    <span class="sale-badge">Sale</span>
+
+                </div>
+
+                <h3>Casual Dress</h3>
+                <p class="price">₹1,899</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+                         alt="Product">
+
+                    <span class="sale-badge">Sale</span>
+
+                </div>
+
+                <h3>Summer Outfit</h3>
+                <p class="price">₹2,199</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80"
+                         alt="Product">
+
+                    <span class="sale-badge">Sale</span>
+
+                </div>
+
+                <h3>Denim Jacket</h3>
+                <p class="price">₹2,499</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIMITED OFFER -->
+    <section class="limited-offer">
+
+        <div class="limited-image">
+
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=80"
+                 alt="Limited Offer">
+
+        </div>
+
+        <div class="limited-content">
+
+            <p>Limited Offer</p>
+
+            <h2>
+                35% OFF on this
+                <br>
+                for the first 30 Customers
+            </h2>
+
+            <a href="collections.html" class="white-button">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section">
+
+        <h2>Join our News Letter</h2>
+
+        <p>
+            Signup for our email newspaper to get exclusive discounts,
+            updates, and more
+        </p>
+
+        <form onsubmit="subscribeNewsletter(event)">
+
+            <input type="email"
+                   id="newsletterEmail"
+                   placeholder="Enter your email"
+                   required>
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h2>Nostra</h2>
+
+                <p>
+                    Nostra is your destination for modern fashion,
+                    quality products and the latest trends.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Customer Care</h3>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Nostra.com. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
